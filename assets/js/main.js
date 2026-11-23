@@ -92,9 +92,9 @@ pubBtns.forEach(btn => {
   });
 });
 
-// --- FILE LINKS (CV / paper PDFs) ---
+// --- FILE LINKS (paper PDFs) ---
 // Links marked data-file-check start hidden and only appear once the file
-// actually exists in the repo (files/cv, files/papers). Drop a PDF with the
+// actually exists in the repo (files/papers). Drop a PDF with the
 // matching name into the folder and the button shows up automatically.
 document.querySelectorAll('a[data-file-check]').forEach(link => {
   fetch(link.getAttribute('href'), { method: 'HEAD', cache: 'no-store' })

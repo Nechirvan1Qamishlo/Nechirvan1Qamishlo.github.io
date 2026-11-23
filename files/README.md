@@ -1,11 +1,7 @@
-# Files (CV, papers, slides)
+# Files (papers, slides)
 
 Everything in this folder is served directly by GitHub Pages, e.g.
-`files/cv/Nechirvan-Othman-CV.pdf` → https://nechirvanothman.me/files/cv/Nechirvan-Othman-CV.pdf
-
-## CV
-Upload your CV as **`files/cv/Nechirvan-Othman-CV.pdf`**.
-The "Download CV" button on the homepage appears automatically once this file exists.
+`files/papers/2021-big-data-sustainable-performance.pdf` → https://nechirvanothman.me/files/papers/2021-big-data-sustainable-performance.pdf
 
 ## Papers
 Each publication on the homepage already has a hidden "PDF ↓" link. Upload the PDF with the

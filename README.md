@@ -12,12 +12,11 @@ Personal academic website for **Nechirvan A. Othman** — PhD Researcher in Busi
 ├── blog/
 │   └── index.html      # Blog landing page + subscribe form (add individual posts here)
 ├── files/
-│   ├── cv/             # Nechirvan-Othman-CV.pdf → "Download CV" button appears automatically
 │   ├── papers/         # Paper PDFs → "PDF ↓" link appears on the matching publication
 │   └── README.md       # File names for each publication
 ├── assets/
 │   ├── css/style.css   # All styles
-│   ├── js/main.js      # Navigation, animations, publication filter, forms, file links
+│   ├── js/main.js      # Navigation, animations, publication filter, forms, PDF links
 │   ├── favicon.svg     # Browser tab icon
 │   └── photo.jpg       # Profile photo
 ├── 404.html            # "Page not found" page
@@ -40,7 +39,7 @@ Both the contact form (homepage) and the blog subscribe form use the same
 and the visitor sees a confirmation without leaving the page. Subscriptions arrive with the
 subject "New blog subscriber". A hidden `_gotcha` field blocks simple spam bots.
 
-## CV and Paper PDFs
+## Paper PDFs
 
 See [`files/README.md`](files/README.md). Upload a PDF with the expected name and its button
 appears on the site automatically — no HTML editing needed.
