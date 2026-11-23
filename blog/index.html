@@ -5,6 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog — Nechirvan A. Othman</title>
 <meta name="description" content="Research notes, field reflections, and academic commentary by Nechirvan A. Othman.">
+<meta name="theme-color" content="#0d0f14">
+<link rel="canonical" href="https://nechirvanothman.me/blog/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nechirvanothman.me/blog/">
+<meta property="og:title" content="Blog — Nechirvan A. Othman">
+<meta property="og:description" content="Research notes, field reflections, and academic commentary.">
+<meta property="og:image" content="https://nechirvanothman.me/assets/photo.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<script>document.documentElement.classList.add('js');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
@@ -26,18 +36,19 @@
   .blog-subscribe { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 3rem; text-align: center; margin-top: 4rem; }
   .blog-subscribe h3 { font-family: var(--serif); font-size: 1.8rem; font-weight: 300; color: var(--text); margin-bottom: 0.75rem; }
   .blog-subscribe p { color: var(--text-muted); margin-bottom: 1.5rem; }
-  .subscribe-row { display: flex; gap: 0.75rem; max-width: 420px; margin: 0 auto; }
+  .subscribe-row { display: flex; position: relative; gap: 0.75rem; max-width: 420px; margin: 0 auto; }
   .subscribe-row input { flex: 1; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 0.65rem 1rem; color: var(--text); font-family: var(--sans); font-size: 0.875rem; outline: none; }
   .subscribe-row input:focus { border-color: rgba(200,150,74,0.5); }
   @media (max-width: 480px) { .subscribe-row { flex-direction: column; } }
 </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to content</a>
 
 <nav id="navbar">
   <div class="nav-inner">
-    <a href="../index.html" class="nav-logo">N<span class="accent">.</span>Othman</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <a href="../" class="nav-logo">N<span class="accent">.</span>Othman</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="navLinks">
@@ -45,11 +56,13 @@
       <li><a href="../index.html#research">Research</a></li>
       <li><a href="../index.html#experience">Experience</a></li>
       <li><a href="../index.html#publications">Publications</a></li>
-      <li><a href="index.html" class="nav-cta">Blog</a></li>
+      <li><a href="./" aria-current="page">Blog</a></li>
+      <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
     </ul>
   </div>
 </nav>
 
+<main id="main">
 <div class="blog-hero">
   <div class="container">
     <span class="mono" style="color:var(--accent);display:block;margin-bottom:1rem;font-size:0.72rem;letter-spacing:0.1em;">BLOG</span>
@@ -101,17 +114,26 @@
 
     </div>
 
-    <div class="blog-subscribe" data-animate>
+    <div class="blog-subscribe" id="subscribe" data-animate>
       <h3>Stay Updated</h3>
       <p class="mono" style="color:var(--text-muted);font-size:0.85rem;">New posts on research, practice, and academic life. No spam.</p>
-      <div class="subscribe-row">
-        <input type="email" placeholder="your@email.com">
-        <button class="btn btn-primary" onclick="alert('Newsletter coming soon! Check back here or connect via email.')">Notify me</button>
-      </div>
+      <form action="https://formspree.io/f/maqzwqjb" method="POST" data-ajax-form data-success="You're on the list — I'll let you know when new posts go up.">
+        <input type="hidden" name="_subject" value="New blog subscriber — nechirvanothman.me">
+        <input type="hidden" name="type" value="Blog subscription">
+        <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="subscribe-row">
+          <label for="subEmail" class="hp-field">Email address</label>
+          <input type="email" id="subEmail" name="email" required placeholder="your@email.com">
+          <button type="submit" class="btn btn-primary">Notify me</button>
+        </div>
+        <p class="form-status mono" role="status" aria-live="polite"></p>
+      </form>
     </div>
 
   </div>
 </div>
+
+</main>
 
 <footer class="footer">
   <div class="container footer-inner">
@@ -127,12 +149,12 @@
       <a href="../index.html#contact">Contact</a>
     </div>
     <div class="footer-bottom mono">
-      <span>© 2025 Nechirvan A. Othman</span>
+      <span>© <span data-year>2026</span> Nechirvan A. Othman</span>
       <span>Hosted on GitHub Pages</span>
     </div>
   </div>
 </footer>
 
-<script src="../assets/js/main.js"></script>
+<script src="../assets/js/main.js" defer></script>
 </body>
 </html>

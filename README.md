@@ -10,11 +10,19 @@ Personal academic website for **Nechirvan A. Othman** — PhD Researcher in Busi
 /
 ├── index.html          # Main one-page site (Home, About, Research, Experience, Publications, Blog, Contact)
 ├── blog/
-│   └── index.html      # Blog landing page (add individual posts here)
+│   └── index.html      # Blog landing page + subscribe form (add individual posts here)
+├── files/
+│   ├── cv/             # Nechirvan-Othman-CV.pdf → "Download CV" button appears automatically
+│   ├── papers/         # Paper PDFs → "PDF ↓" link appears on the matching publication
+│   └── README.md       # File names for each publication
 ├── assets/
 │   ├── css/style.css   # All styles
-│   ├── js/main.js      # Navigation, animations, publication filter
+│   ├── js/main.js      # Navigation, animations, publication filter, forms, file links
+│   ├── favicon.svg     # Browser tab icon
 │   └── photo.jpg       # Profile photo
+├── 404.html            # "Page not found" page
+├── sitemap.xml         # For Google indexing (update lastmod when you add pages)
+├── robots.txt
 └── _config.yml         # GitHub Pages config
 ```
 
@@ -25,12 +33,17 @@ Personal academic website for **Nechirvan A. Othman** — PhD Researcher in Busi
 3. Add your content
 4. Link from `blog/index.html` and `index.html#blog`
 
-## Contact Form
+## Contact & Subscribe Forms
 
-The contact form uses [Formspree](https://formspree.io). To activate:
-1. Sign up at formspree.io
-2. Create a new form
-3. Replace `YOUR_FORM_ID` in `index.html` with your form ID
+Both the contact form (homepage) and the blog subscribe form use the same
+[Formspree](https://formspree.io) form (`maqzwqjb`). Messages are sent in the background
+and the visitor sees a confirmation without leaving the page. Subscriptions arrive with the
+subject "New blog subscriber". A hidden `_gotcha` field blocks simple spam bots.
+
+## CV and Paper PDFs
+
+See [`files/README.md`](files/README.md). Upload a PDF with the expected name and its button
+appears on the site automatically — no HTML editing needed.
 
 ## Deployment
 
